@@ -1,9 +1,10 @@
-# 🎄 Merry Christmas Celebration Template
+# 🎄 Merry Christmas 2025 Celebration Template
 
-A beautiful, interactive Merry Christmas celebration template with animated snowflakes, a decorated Christmas tree, twinkling lights, gift boxes, and a confetti system.
+A beautiful, interactive Merry Christmas 2025 celebration template with animated snowflakes, a decorated Christmas tree, twinkling lights, gift boxes, and a confetti system.
 
 ## ✨ Features
 
+- **2025 Year Badge**: Animated year badge with pulsing glow effect
 - **Animated Snowflakes**: Falling snowflakes with smooth animations
 - **Interactive Christmas Tree**: Decorated tree with ornaments and a twinkling star
 - **Twinkling Lights**: Colorful Christmas lights with blinking animations
@@ -63,6 +64,7 @@ You can customize colors by editing the CSS variables and color values in `index
 
 - Background gradient: Modify the `background` property in the `body` selector
 - Text colors: Change the `color` property in `.title` and `.subtitle`
+- Year badge: Customize the `.year-badge` styling to change the year display appearance
 - Light colors: Modify the `background` colors in `.light` selectors
 - Gift box colors: Update the gradient colors in `.gift-1`, `.gift-2`, `.gift-3`
 
@@ -104,8 +106,8 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🎅 Enjoy!
 
-Have a wonderful and Merry Christmas! 🎄✨
+Have a wonderful and Merry Christmas 2025! 🎄✨
 
 ---
 
-Made with ❤️ for the holiday season
+Made with ❤️ for the 2025 holiday season

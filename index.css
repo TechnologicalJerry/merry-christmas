@@ -1,0 +1,362 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0a1929 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Snowflakes Animation */
+.snowflakes {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: white;
+    font-size: 1.5em;
+    animation: fall linear infinite;
+    opacity: 0.8;
+}
+
+.snowflake:nth-child(1) { left: 10%; animation-duration: 10s; animation-delay: 0s; }
+.snowflake:nth-child(2) { left: 20%; animation-duration: 12s; animation-delay: 1s; }
+.snowflake:nth-child(3) { left: 30%; animation-duration: 11s; animation-delay: 2s; }
+.snowflake:nth-child(4) { left: 40%; animation-duration: 13s; animation-delay: 0.5s; }
+.snowflake:nth-child(5) { left: 50%; animation-duration: 10s; animation-delay: 1.5s; }
+.snowflake:nth-child(6) { left: 60%; animation-duration: 12s; animation-delay: 2.5s; }
+.snowflake:nth-child(7) { left: 70%; animation-duration: 11s; animation-delay: 0.8s; }
+.snowflake:nth-child(8) { left: 80%; animation-duration: 13s; animation-delay: 1.8s; }
+.snowflake:nth-child(9) { left: 90%; animation-duration: 10s; animation-delay: 0.3s; }
+.snowflake:nth-child(10) { left: 15%; animation-duration: 12s; animation-delay: 1.3s; }
+.snowflake:nth-child(11) { left: 25%; animation-duration: 11s; animation-delay: 2.3s; }
+.snowflake:nth-child(12) { left: 35%; animation-duration: 13s; animation-delay: 0.7s; }
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+/* Container */
+.container {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 2rem;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* Christmas Tree */
+.christmas-tree {
+    position: relative;
+    display: inline-block;
+    margin: 2rem 0;
+}
+
+.tree {
+    position: relative;
+    width: 200px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.star {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3rem;
+    animation: twinkle 2s ease-in-out infinite;
+    z-index: 5;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateX(-50%) scale(1.1); }
+}
+
+.branch {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 100px solid transparent;
+    border-right: 100px solid transparent;
+    border-bottom: 50px solid #2d5016;
+    filter: drop-shadow(0 0 10px rgba(45, 80, 22, 0.5));
+}
+
+.branch-1 {
+    top: 0;
+    border-bottom-width: 60px;
+    border-left-width: 80px;
+    border-right-width: 80px;
+}
+
+.branch-2 {
+    top: 50px;
+    border-bottom-width: 70px;
+    border-left-width: 90px;
+    border-right-width: 90px;
+}
+
+.branch-3 {
+    top: 110px;
+    border-bottom-width: 80px;
+    border-left-width: 100px;
+    border-right-width: 100px;
+}
+
+.branch-4 {
+    top: 180px;
+    border-bottom-width: 90px;
+    border-left-width: 110px;
+    border-right-width: 110px;
+}
+
+.trunk {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 50px;
+    background: #8b4513;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Ornaments */
+.ornaments {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.ornament {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: swing 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.8));
+}
+
+.ornament:nth-child(1) { top: 30px; left: 30%; animation-delay: 0s; }
+.ornament:nth-child(2) { top: 80px; left: 70%; animation-delay: 0.5s; }
+.ornament:nth-child(3) { top: 130px; left: 25%; animation-delay: 1s; }
+.ornament:nth-child(4) { top: 180px; left: 75%; animation-delay: 1.5s; }
+.ornament:nth-child(5) { top: 230px; left: 50%; animation-delay: 2s; }
+
+@keyframes swing {
+    0%, 100% { transform: rotate(-5deg); }
+    50% { transform: rotate(5deg); }
+}
+
+/* Message Container */
+.message-container {
+    margin: 3rem 0;
+}
+
+.title {
+    font-size: 4rem;
+    color: #ffd700;
+    text-shadow: 
+        0 0 10px rgba(255, 215, 0, 0.8),
+        0 0 20px rgba(255, 215, 0, 0.6),
+        0 0 30px rgba(255, 215, 0, 0.4);
+    margin-bottom: 1rem;
+    animation: glow 2s ease-in-out infinite alternate;
+    font-weight: bold;
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 
+            0 0 10px rgba(255, 215, 0, 0.8),
+            0 0 20px rgba(255, 215, 0, 0.6),
+            0 0 30px rgba(255, 215, 0, 0.4);
+    }
+    to {
+        text-shadow: 
+            0 0 20px rgba(255, 215, 0, 1),
+            0 0 30px rgba(255, 215, 0, 0.8),
+            0 0 40px rgba(255, 215, 0, 0.6),
+            0 0 50px rgba(255, 215, 0, 0.4);
+    }
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Christmas Lights */
+.lights {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+.light {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    animation: blink 1.5s ease-in-out infinite;
+    box-shadow: 0 0 10px currentColor;
+}
+
+.light:nth-child(1) { background: #ff0000; animation-delay: 0s; }
+.light:nth-child(2) { background: #00ff00; animation-delay: 0.2s; }
+.light:nth-child(3) { background: #0000ff; animation-delay: 0.4s; }
+.light:nth-child(4) { background: #ffff00; animation-delay: 0.6s; }
+.light:nth-child(5) { background: #ff00ff; animation-delay: 0.8s; }
+.light:nth-child(6) { background: #00ffff; animation-delay: 1s; }
+.light:nth-child(7) { background: #ff8800; animation-delay: 1.2s; }
+.light:nth-child(8) { background: #8800ff; animation-delay: 1.4s; }
+
+@keyframes blink {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.3; transform: scale(0.8); }
+}
+
+/* Gift Boxes */
+.gift-boxes {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 3rem 0;
+    flex-wrap: wrap;
+}
+
+.gift {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: bounce 2s ease-in-out infinite;
+}
+
+.gift-1 {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a6f);
+    animation-delay: 0s;
+}
+
+.gift-2 {
+    background: linear-gradient(135deg, #4ecdc4, #44a08d);
+    animation-delay: 0.3s;
+}
+
+.gift-3 {
+    background: linear-gradient(135deg, #ffe66d, #ffd93d);
+    animation-delay: 0.6s;
+}
+
+.gift-lid {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 20px;
+    background: inherit;
+    border-radius: 5px 5px 0 0;
+}
+
+.gift-bow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 
+        -20px 0 0 -10px #fff,
+        20px 0 0 -10px #fff,
+        0 -20px 0 -10px #fff,
+        0 20px 0 -10px #fff;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Celebration Button */
+.celebration-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s ease;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.celebration-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+}
+
+.celebration-btn:active {
+    transform: translateY(-1px);
+}
+
+/* Confetti Canvas */
+#confettiCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+    
+    .subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .tree {
+        width: 150px;
+        height: 225px;
+    }
+    
+    .gift {
+        width: 80px;
+        height: 80px;
+    }
+}
+

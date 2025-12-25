@@ -214,5 +214,5 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-console.log('🎄 Merry Christmas! 🎄');
+console.log('🎄 Merry Christmas 2025! 🎄');
 
